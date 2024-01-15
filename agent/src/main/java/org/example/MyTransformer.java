@@ -13,7 +13,7 @@ public class MyTransformer implements ClassFileTransformer {
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) {
         String realClassName = className.replaceAll("/", ".");
 
-        if (realClassName.contains("com.hs.study")) {
+        if (realClassName.contains("org.test")) {
             CtClass ctClass;
             try {
                 ClassPool classPool = ClassPool.getDefault();
